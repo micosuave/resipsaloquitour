@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/micosuave/resipsaloquitour#readme",
   "dependencies": {
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "serve-static": "^1.12.4"
   }
 }
