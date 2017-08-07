@@ -1,0 +1,22 @@
+{
+  "name": "resipsaloquitour",
+  "version": "0.0.0",
+  "description": "homepage",
+  "main": "app.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micosuave/resipsaloquitour.git"
+  },
+  "author": "micosuave",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/micosuave/resipsaloquitour/issues"
+  },
+  "homepage": "https://github.com/micosuave/resipsaloquitour#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
