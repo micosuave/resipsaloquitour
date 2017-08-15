@@ -1,27 +1,416 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="html"> <!--<![endif]-->
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://lexlaw.io/llp_core/dist/app.full.min.css" rel="stylesheet" />
+    <link data-require="jqueryui@*"
+          data-semver="1.10.0"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.0/css/smoothness/jquery-ui-1.10.0.custom.min.css"
+          rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css"
+          rel="stylesheet" />
+    <link href="/llp_core/bower_components/ngDialog/css/ngDialog.css"
+          rel="stylesheet" />
+    <link data-require="ngDialog@*"
+          data-semver="0.4.0"
+          href="https://rawgit.com/likeastore/ngDialog/0.4.0/css/ngDialog.min.css"
+          rel="stylesheet" />
+    <link data-require="ngDialog@*"
+          data-semver="0.4.0"
+          href="https://rawgit.com/likeastore/ngDialog/0.4.0/css/ngDialog-theme-default.min.css"
+          rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tether-select/1.1.1/css/select-theme-default.css"
+          rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+          rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC|Alegreya+Sans+SC|Allerta|Allerta+Stencil|Amethysta|Amiko|Anonymous+Pro|Assistant|Average|Belgrano|Black+Ops+One|Cantarell|Carrois+Gothic+SC|Convergence|Cousine|Crimson+Text|Didact+Gothic|Droid+Sans|Enriqueta|Fanwood+Text|Fira+Mono|Fira+Sans|Forum|Gentium+Book+Basic|Graduate|Halant|Heebo|IM+Fell+DW+Pica|Inconsolata|Italianno|Jura|Kalam|Lusitana|Magra|Mandali|Marcellus|Marcellus+SC|Mate|Mate+SC|NTR|Nunito|Nunito+Sans|Open+Sans|Open+Sans+Condensed:300|Ovo|Padauk|Palanquin|Petit+Formal+Script|Pinyon+Script|Pontano+Sans|Quattrocento|Quicksand|Raleway|Ramaraja|Rationale|Roboto|Rubik|Rufina|Source+Code+Pro|Source+Serif+Pro|Space+Mono|Special+Elite|Sura|Tangerine|Volkhov|Work+Sans|Yantramanav|Assistant|Hind+Madurai|Julius+Sans+One|Lato|Mandali|Quattrocento+Sans"
+          rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/pure/0.6.0/pure-min.css"
+          rel="stylesheet" />
+    <link href="/llp_core/dist/app.full.min.css"
+          rel="stylesheet" />
   </head>
-  <body class="html3">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div class="panel panel-default">
-      <div class="panel-heading">
-    <h1 class="panel-title">res ipsa loqui<span style="color: steelblue;">tour</span></h1>
+  <body class="panel panel-default dark-bg">
+    <div class="card card-block">
+      <div class="layoutmanager">
+        <div class="container-fluid layout-container">
+          <div class="row layout-row">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-xs-12">
+                  <div class="card">
+                    <!--CUTSLIDEHEAD-->
+                    <div class="card card-block"
+                         style="padding: 20px; border: 2px solid silver;">
+                      <div class="layoutmanager">
+                        <div class="container-fluid layout-container">
+                          <div class="row layout-row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 layout-column">
+                              <div class="layout-column-one layout-column-editable">
+                                <div class="layoutmanager">
+                                  <div class="container-fluid layout-container">
+                                    <div class="row layout-row">
+                                      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 layout-column">
+                                        <div class="layout-column-one layout-column-editable">
+                                          <p>
+                                            <span style="font-family: 'Raleway'; font-size: 18px;">All the Tech That&#39;s Fit to&nbsp;Law</span>
+                                          </p>
+                                          <p>
+                                            <span style="font-family: 'Raleway'; font-size: 16px;">Week of August 14, 2017</span>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 layout-column">
+                                        <div class="layout-column-two layout-column-editable">
+                                          <p style="text-align: center;">
+                                            <span style="font-family: 'Raleway'; font-size: 18px;">Machine Intelligence for the Scientific Lawyer</span>
+                                          </p>
+                                        </div>
+                                      </div>
+                                      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 layout-column">
+                                        <div class="layout-column-three layout-column-editable">
+                                          <p style="text-align: right;">
+                                            <span style="font-family: 'Raleway'; font-size: 18px;">All the Law That&#39;s Fit for&nbsp;Tech</span>
+                                          </p>
+                                          <p style="text-align: right;">
+                                            <span style="font-family: 'Raleway'; font-size: 16px;">Vol. I, Issue 1</span>
+                                          </p>
+                                          <p style="text-align: right; font-family: Assistant; font-size: 14px;">
+                                            <a href="mailto:arie.michelsohn@lexlaw.io?subject=Comments%20re%3A%20ResIpsaLoquiTOUR.Tech%20">Contact Us</a>
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p style="text-align: center; padding: 10px; font-family: 'Mate SC'; font-size: 56px; color: teal; text-shadow: 4px 4px 4px linen;">
+                                  <strong>
+                                  <span style="color:#999999;">RESIPSALOQUI</span>
+                                  <span style="color:#0033cc;">TOUR</span>.
+                                  <span style="color:#27ae60;">TECH&nbsp;</span></strong>
+                                  <strong>
+                                    <span style="color:#27ae60;"></span>
+                                  </strong>
+                                </p>
+                                <div class="bootstrap-tabs"
+                                     data-tab-set-title="News-of-the-Day">
+                                  <ul class="panel-Applicant nav nav-tabs"
+                                      role="tablist">
+                                    <li role="presentation">
+                                      <a aria-controls="news-of-the-day-tab-1"
+                                         class="tab-link"
+                                         data-toggle="tab"
+                                         href="#news-of-the-day-tab-1"
+                                         role="tab">Front Section</a>
+                                    </li>
+                                    <li role="presentation">
+                                      <a aria-controls="news-of-the-day-tab-2"
+                                         class="tab-link"
+                                         data-toggle="tab"
+                                         href="#news-of-the-day-tab-2"
+                                         role="tab">Resources</a>
+                                    </li>
+                                    <li role="presentation">&nbsp;</li>
+                                  </ul>
+                                  <div class="tab-content">
+                                    <!-- add tab panels here -->
+                                    <div class="tab-pane active"
+                                         id="news-of-the-day-tab-1"
+                                         role="tabpanel">
+                                      <div class="tab-pane-content">
+                                        <hr />
+                                        <div class="layoutmanager">
+                                          <div class="container-fluid layout-container">
+                                            <div class="row layout-row">
+                                              <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 layout-column">
+                                                <div class="layout-column-one layout-column-editable"
+                                                     style="overflow-y: scroll; height: 720px; font-size: 16px; line-height: 1.5em; padding-left: 60px; padding-right: 60px; padding-top: 25px; padding-bottom: 25px; border: 2px solid silver; box-shadow: 8px 8px 4px linen;">
+
+                                                  <h2 class="panel-Fancy">
+                                                    <span style="font-family: 'Mate SC'; font-size: 52px; line-height: 1.4em;">
+                                                      <strong>Five (5) Essential Qualities of &ldquo;The Scientific Lawyer&rdquo;</strong>
+                                                    </span>
+                                                  </h2>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 20px; line-height: 1.8em;">Arie M. Michelsohn, Ph.D., J.D.</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">When I was a graduate student in the Biology Division&nbsp;at Caltech in the 1980s, I had the good fortune to serve as a
+                                                  Teaching Assistant for an upper-level, undergraduate, introductory course in neurobiology, called BI 150. &nbsp;It was an exciting time for neuroscience, as advancements in our understanding of both
+                                                  neural circuits and computation started to converge into a new field. &nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">In 1986, Caltech started a new graduate program called Computation &amp; Neural Systems, organized jointly by the Division of
+                                                  Biology, the Division of Engineering and Applied Science, and the Division of Physics, Mathematics and Astronomy. &nbsp;BI 150 was a required course for first-year graduate students in the program.
+                                                  &nbsp;This enabled me to witness, and in some small way, participate first-hand, in the dawn of computational neuroscience and the advent of neural-network computation. &nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">More than a decade later, as a junior&nbsp;lawyer, I had another Forrest-Gump moment:&nbsp; I got to study a large swath of
+                                                  the then-emerging patent landscape for bioinformatics and computational genomics. &nbsp;More recently, through&nbsp;a fascinating consulting engagement, I was again able to delve deeply into the
+                                                  history of the convergence of computation; this time with chemistry, in a case involving computer-aided drug design around the turn of the 21st Century.&nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">As a lawyer, what excites me&mdash;most of all&mdash;is the convergence of computation and law that we are all experiencing,
+                                                  right now. The digital legal enlightenment may well be the ultimate convergence of the nerds; and that, to my mind, is a great thing. &nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">Law practice is evolving to encompass a more techno-savvy legal mind-set. I would argue, further, that law practice can
+                                                  productively be viewed as an applied science: The application of science to the pursuit of...Justice. That is, by agile navigation through the multidimensional information-space of modern legal
+                                                  systems on behalf of clients, lawyers add great value to strategic vision, the propriety of business transactions, and risk mitigation in all spheres of complex, modern economic and social life. The
+                                                  nature and substance&nbsp;of the iterative&nbsp;curatorial, compositional,&nbsp;and communication workflows that support&nbsp;the high-value strategic judgments lawyers make can, nowadays,
+                                                  increasingly be modelled, measured, and made much more efficient.</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">I would like to suggest five qualities of &quot;Scientific Lawyers&quot; that will be keys to the successful, long-term, and
+                                                  productive integration of law and computation in the years to come. These qualities may be considered foundational to an informed discussion about what &quot;machine intelligence&quot; for lawyers
+                                                  is, or should be.</p>
+                                                  <blockquote>
+                                                    <p style="font-family: 'Fira Sans'; font-size: 24px; line-height: 1.8em;">
+                                                      <span style="color:#d35400;">
+                                                        <em>The Scientific Lawyer:</em>
+                                                      </span>
+                                                    </p>
+                                                    <p style="font-family: 'Fira Sans'; font-size: 20px; line-height: 1.8em;">1. Experiments Clearly and Rigorously
+                                                    <br />2. Engages the Tech Side of the Digital Era
+                                                    <br />3. Visualizes Legal Data Meaningfully
+                                                    <br />4. Models Real Problems to Optimize Tractable Solutions
+                                                    <br />5. Thrives in a Competitive Digital Commons</p>
+                                                  </blockquote>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">Today, I would like to elaborate on the first of these qualities. I plan to further discuss each of the other qualities, in
+                                                  turn, over the course of this week.</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 18px; line-height: 1.8em;">
+                                                    <strong>1. The Experimental Lawyer</strong>
+                                                  </p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">In her&nbsp;whimsically informative book, &quot;
+                                                  <a href="https://books.google.com/books/about/Much_Depends_on_Dinner.html?id=vJ_-pd7RKa8C&amp;printsec=frontcover&amp;source=kp_read_button#v=onepage&amp;q&amp;f=false"
+                                                     onclick="window.open(this.href, '', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=yes,dependent=no,width=1200,left=100,height=900,top=100'); return false;">
+                                                     Much Depends on Dinner</a>,&quot; Margaret Visser writes&nbsp;about the history, culture, and science of&nbsp;an ordinary meal. &nbsp;The discussion about corn, in Chapter 1 (at 
+                                                  <a href="https://lexlaw.io/files/uploads/1502741682954.html"
+                                                     target="fframe">page 25</a>), provides one of the simplest and most elegant examples of&nbsp;scientific reasoning I have ever seen. &nbsp;It is a testament to clear and rigorous scientific
+                                                     thinking across any age and discipline:</p>
+                                                  <blockquote>
+                                                    <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">The Indians observed that different types of corn could cross and produce offspring with characteristics derived from both
+                                                    parents. &nbsp;They believed that the plant roots mingled underground to produce this effect,&nbsp;and this was not proven wrong until 1724, when Judge Paul Dudley of Massachusetts noticed that
+                                                    changes took place in corn when different types were separated by a river, but not when they were separated by a high fence.&nbsp;The Crossing must therefore take place in the air, and not
+                                                    underground.</p>
+                                                  </blockquote>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">The Scientific Lawyer appreciates that legal phenomena, like the &quot;relevance&quot; of a document to discovery in
+                                                  litigation, or a conditional clause in a self-enforcing etherium-blockchain contract, also are amenable to scientific inquiry. Legal phenomena increasingly can be made&nbsp;the subjects&nbsp;of
+                                                  experimental designs that&nbsp;yield reproducible observations and measurements, within&nbsp;measurable uncertainties. &nbsp;Well-designed experiments can provide dispositive&nbsp;answers to
+                                                  questions of significant importance to the efficient and effective practice of law in the digital era. &nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">The scientific lawyer further understands that &quot;good&quot; experiments are well-controlled, and strategically designed
+                                                  to distinguish clearly between alternative, causal hypotheses&mdash;ideally, validating one, while falsifying another. Science, like law, never really proves something is true to 100% certainty. But
+                                                  it can falsify (or &quot;impeach&quot;), ruthlessly and&nbsp;unambiguously. &nbsp;
+                                                  <em>See e.g.</em>, Richard P. Feynman, &quot;
+                                                  <a href="https://www.youtube.com/embed/LIxvQMhttq4"
+                                                     target="fframe">The Essence of Science in 60 Seconds</a>&quot; (Caltech, 1964) (YouTube); 
+                                                  <em>see also</em>Richard P. Feynman, &quot;On Scientific Method&quot; (
+                                                  <a href="https://www.youtube.com/embed/0KmimDq4cSU"
+                                                     target="fframe">longer segment</a>from same lecture, giving an opportunity to hear an additional five minutes of Professor Feynman discussing the scientific method).</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">A foundational example of the utility of clear and rigorous legal science, heralding the digital legal era, can be found in
+                                                  the landmark opinion by Judge Andrew Peck of the Southern District of New York, in&nbsp;
+                                                  <em>Moore v. Publicis Groupe</em>, 
+                                                  <a href="https://cdn.filepicker.io/api/file/G79jFE7LRsmnNumxxjpr"
+                                                     target="fframe">11 CIV. 1279 ALC AJP, 2012 WL 607412</a>. &nbsp;There, Judge Peck quotes from the empirical legal studies published by Grossman &amp; Cormack, Maura R. Grossman &amp; Gordon V.
+                                                     Cormack, 
+                                                  <em>Technology-Assisted Review in E-Discovery Can Be More Effective and More Efficient Than Exhaustive Manual Review</em>, Rich. 
+                                                  <a href="https://cdn.filepicker.io/api/file/JKx83OT2QbqIjeBWoEP1"
+                                                     target="fframe">J.L.&amp; Tech., Spring 2011</a>. &nbsp;</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">Grossman &amp; Cormack used a carefully-controlled experimental paradigm to measure efficiency and efficacy
+                                                  in&nbsp;identifying relevant documents from a large document collection subject&nbsp;to discovery requests in litigation. &nbsp;The researchers&nbsp;pitted human lawyers against machines trained by
+                                                  senior lawyers. According to the observed data,&nbsp;the machines won, hands-down. 
+                                                  <em>See Moore</em>, 
+                                                  <a href="https://cdn.filepicker.io/api/file/G79jFE7LRsmnNumxxjpr"
+                                                     target="fframe">Slip. Op.</a>at 19 (&quot;[T]he myth that exhaustive manual review is the most effective&mdash;and therefore the most defensible&mdash;approach to document review is strongly
+                                                     refuted. Technology-assisted review can (and does) yield more accurate results&nbsp;than exhaustive manual review, with much lower effort.&quot;) (
+                                                  <em>quoting</em>
+                                                  <a href="http://cdn.filepicker.io/api/file/JKx83OT2QbqIjeBWoEP1"
+                                                     target="fframe">Grossman &amp; Cormack</a>, at 48). &nbsp;(You will additionally find a compendium of resources from the 
+                                                  <em>Moore</em>case under the Resources tab, above.)</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">Such well-designed empirical legal studies rival&nbsp;the clarity and rigor of those in respected scientific journals, and
+                                                  justify judicial acceptance and reliance for dispositve adjudication. They set a noble standard for the future development of legal science by both lawyers and jurists in the digital legal era.</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">Moreover, as Grossman &amp; Cormack note at the end of their paper, the machine-enhanced review &quot;processes found to be
+                                                  superior&quot; did not merely entail &quot;the naive application of technology absent human judgment,&quot; but rather required a productively interactive relationship between human lawyer and
+                                                  machine. With such a relationship defined specifically, and deployed successfully, research has been able&nbsp;to turn to more interesting questions, like &quot;which technology-assisted review
+                                                  process(es) will improve most on manual review?&quot; 
+                                                  <em>Id</em>.</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">And on the issue of optimizing efficiency, scientific lawyers can take inspiration from the ingenious ways in which computer
+                                                  scientists have continually striven to improve upon the efficiency of important computational processes, as data size and transformational complexity increase globally over time. &nbsp;A prime
+                                                  example is sorting algorithms. A clear introduction to the subject can be found in 
+                                                  <a class="pop"
+                                                     href="https://www.youtube.com/embed/WaNLJf8xzC4">this</a>YouTube video on sorting library books on a shelf&mdash;just like the &quot;old days&quot;&mdash;except virtually. Consider also watching 
+                                                  <a class="pop"
+                                                     href="https://www.youtube.com/embed/BeoCbJPuvSE">this</a>&nbsp;mezmerizingly informative, two-minute YouTube video, which compares 
+                                                  <a class="pop"
+                                                     href="https://www.youtube.com/embed/BeoCbJPuvSE">24 different sorting algorithms</a>as they race to the beat, and to the finish, in parallel with each other, on a single screen. &nbsp;Sometimes,
+                                                     experimental results are 
+                                                  <em>that</em>clear&mdash;as a bell and a whistle, video-game style. &nbsp;There&#39;s no question who wins, and who loses; and now all that&#39;s left you want to know is...how?!</p>
+                                                  <p style="font-family: 'Fira Sans'; font-size: 16px; line-height: 1.8em;">More, on that, tomorrow.
+                                                  <br />&nbsp;</p>
+                                                </div>
+                                              </div>
+                                              <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 layout-column">
+                                                <div class="layout-column-two layout-column-editable">
+                                                  <p>
+                                                    <iframe align="right"
+                                                            frameborder="0"
+                                                            height="760px"
+                                                            name="fframe"
+                                                            scrolling="yes"
+                                                            src="/files/uploads/1501774732798.html"
+                                                            style="overflow: scroll;"
+                                                            width="100%"></iframe>
+                                                  </p>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="tab-pane"
+                                         id="news-of-the-day-tab-2"
+                                         role="tabpanel">
+                                      <div class="tab-pane-content">
+                                        <div class="card card-block"
+                                             style="font-family: Work Sans; font-size: 16px; line-height: 1.5em;">
+                                          <p style="text-align: center;">
+                                            <span style="color:#d35400;">
+                                              <span style="font-family: Assistant; font-size: 28px;">1. THE EXPERIMENTAL SCIENTIST - JUDGE PECK OPINION; GROSSMAN &amp; CORMACK MATERIALS</span>
+                                            </span>
+                                          </p>
+                                          <hr />
+                                          <p style="text-align: center; padding: 10px; font-family: 'Mate SC'; font-size: 16px; color: teal; text-shadow: 4px 4px 4px linen;">
+                                            <strong>
+                                            <span style="color:#999999;">RESIPSALOQUI</span>
+                                            <span style="color:#0033cc;">TOUR</span>.
+                                            <span style="color:#27ae60;">TECH&nbsp;</span></strong>
+                                            <strong>
+                                              <span style="color:#27ae60;"></span>
+                                            </strong>
+                                          </p>
+                                          <hr />
+                                          <p style="text-align: center;">Maura &nbsp;R. &nbsp;Grossman &nbsp;&amp; &nbsp;Gordon &nbsp;V. &nbsp;Cormack, 
+                                          <a class="pop"
+                                             href="https://cdn.filepicker.io/api/file/JKx83OT2QbqIjeBWoEP1">
+                                            <em>Technology-Assisted &nbsp;Review &nbsp;in &nbsp;E-Discovery &nbsp;Can &nbsp;Be &nbsp;More Effective &nbsp; and &nbsp; More &nbsp; Efficient &nbsp; Than &nbsp; Exhaustive &nbsp; Manual Review</em>
+                                          </a>, &nbsp; &nbsp; XVII &nbsp; &nbsp; RICH.J.L.&amp;TECH. &nbsp; &nbsp; 11 &nbsp; &nbsp; (2011), http://jolt.richmond.edu/v17i3/article11.pdf; 
+                                          <em>quoted in Moore v. Publicis Groupe</em>, 
+                                          <a class="pop"
+                                             href="https://cdn.filepicker.io/api/file/ms1hdXOQTyqmCgBuMECB">11 Civ. 1279 (ALC) (AJP) (Feb. 24, 2012)</a></p>
+                                          <div class="layoutmanager">
+                                            <div contenteditable="false"
+                                                 tabindex="-1">
+                                              <div class="container-fluid layout-container"
+                                                   data-widget="12">
+                                                <div class="row layout-row">
+                                                  <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 layout-column">
+                                                    <div class="layout-column-one layout-column-editable">
+                                                      <p>&nbsp;</p>
+                                                      <p>
+                                                        <img alt=""
+                                                             class="img-shadow; img-responsive"
+                                                             src="https://cdn.filepicker.io/api/file/PB5wvCyCTQuJIjpszgMS"
+                                                             style="width: 85%; margin-left: 100px; margin-right: 100px; float: left;" />
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                  <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7 layout-column">
+                                                    <div class="layout-column-two layout-column-editable">
+                                                      <p>&nbsp;</p>
+                                                      <p>
+                                                        <img alt=""
+                                                             class="img-shadow; img-responsive;"
+                                                             src="https://cdn.filepicker.io/api/file/4Xg1gQgzQSe10L6zUSWs"
+                                                             style="width: 85%; float: right; margin-left: 50px; margin-right: 50px;" />
+                                                      </p>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                          <hr />
+                                          <p>
+                                          <em>See also</em>Maura R. Grossman &amp; Gordon V. Cormack, 
+                                          <a class="pop"
+                                             href="https://cdn.filepicker.io/api/file/kSTVDv2USkGXGr2XlNic">
+                                            <em>Inconsistent Assessment of Responsiveness in E-Discovery: Difference of Opinion or Human Error?</em>
+                                          </a>&nbsp;Research paper at DESI IV: The ICAIL 2011 Workshop on Setting Standards for Searching Electronically Stored Information in Discovery Proceedings, June 6, 2011, University of Pittsburgh, Pittsburgh,
+                                          PA, USA. &nbsp;http://www.umiacs.umd.edu/~oard/desi4/; 
+                                          <a class="pop"
+                                             href="https://cdn.filepicker.io/api/file/G79jFE7LRsmnNumxxjpr">April 25, 2012, Order</a>by United States District Judge Andrew Carter, adopting Magistrate Judge Peck&#39;s analysis of Rule 26(g) &amp;
+                                             Fed. R. Evid. 702; Slip. Op. at 4, n.3 (&quot;for similar reasons provided in his written opinion&quot;); at 4-5 (&quot;Judge Peck concluded that under the circumstances of this particular case, the use
+                                             of predictive coding . . . is more appropriate than keyword searching. &nbsp;The Court does not find a basis to hold that his conclusion is clearly erroneous or contrary to law.&quot;).</p>
+                                          <h3>&nbsp;</h3>
+                                          <h3>&nbsp;</h3>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="tab-pane"
+                                         id="news-of-the-day-tab-3"
+                                         role="tabpanel">
+                                      <div class="tab-pane-content">&nbsp;</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="layoutmanager">
+                                  <div class="container-fluid layout-container">
+                                    <div class="row layout-row">
+                                      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 layout-column">
+                                        <div class="layout-column-one layout-column-editable">
+                                          <p style="font-size: 16px; text-align: center;">Return to 
+                                          <a href="/files/uploads/1501774732798.html"
+                                             target="fframe">Slide Presentation</a>&nbsp;in Main Window &nbsp; &nbsp;&diams; &nbsp; &nbsp;Get Slide Presentation as 
+                                          <a class="pop"
+                                             href="/files/uploads/1501774732798.html">New Window</a>&nbsp; &nbsp; &nbsp;&diams; &nbsp; &nbsp;&nbsp;&copy;2017 Arie M. Michelsohn &amp; LexLaw.Consulting LLC dba Lion Legal Products; All Rights Reserved
+                                             &nbsp; &nbsp;&nbsp;</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <p>&nbsp;</p>
+                              </div>
+                              <!--CUTSLIDETAIL-->
+                              <footer class="navbar-fixed-bottom">
+                                <p style="text-align:center;">DEMONSTRATIVE EXPERIMENTAL MATERIAL - CONTAINS EDUCATIONAL MATERIAL SUBJECT TO LEARNING</p>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2014-11-29/FileSaver.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-select/1.1.1/js/select.min.js"></script>
+                      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js"></script>
+                      <script src="https://apis.google.com/js/client.js"></script>
+                      <script src="https://apis.google.com/js/api.js"></script>
+                      <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+                      <script src="/lexlab-starter/public/jQuery-Plugin-For-Auto-Resizing-iFrame-iFrame-Resizer/src/iframeResizer.js"></script>
+                      <script src="/lexlab-starter/public/js/jquery.pageslide.js"></script>
+                      <script src="https://cdn.ckeditor.com/4.5.7/full-all/ckeditor.js"></script>
+                      <script src="/llp_core/ckeditor/ckeditor.js"></script>
+                      <script src="/llp_core/ckconfig.js"></script>
+                      <script src="/llp_core/ckeditor2/plugins/chart/lib/chart.min.js"></script>
+                      <script src="/llp_core/ckeditor2/plugins/chart/widget2chart.js"></script>
+                      <script src="/lexlab-starter/node_modules/reveal.js/lib/js/head.min.js"></script>
+                      <script src="/lexlab-starter/node_modules/reveal.js/js/reveal.js"></script>
+                      <script src="/llp_core/dist/app.bower.js"></script>
+                      <script data-build="exclude"
+                              data-require="jszip@2.4.0"
+                              data-semver="2.4.0"
+                              src="https://cdn.rawgit.com/Stuk/jszip/v2.4.0/dist/jszip.js"></script>
+                      <script src="https://rawgit.com/alexk111/ngImgCrop/master/compile/unminified/ng-img-crop.js"></script>
+                      <script src="/newwidget/dist/adf-widget-testwidget.js"></script>
+                      <script src="/getphdwidget/dist/adf-widget-getphd.js"></script>
+                      <script src="/pagebuilderwidget/dist/adf-widget-pagebuilder.js"></script>
+                      <script src="/collectionwidget/dist/adf-widget-collectionwidget.js"></script>
+                      <script src="/treewidget/dist/adf-widget-treewidget.js"></script>
+                      <script src="/llp_core/dist/app.mini.js"></script>
+                      <script src="/llp_core/dist/minicache.js"></script>
+                      <script src="/llp_core/dist/templateCache.js"></script>
+                      <script>$("body").flowtype({ minimum : 450, maximum : 1500, minFont : 8, maxFont : 38, fontRatio : 80 });</script>
+                      <script>angular.module("mini").config(function($locationProvider) {$locationProvider.html5Mode(false);});angular.element(document).ready(function(){angular.bootstrap(document, ["mini"]);});</script>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-  <div class="panel-body">
-    <p>Welcome.</p>
-  </div>
-  </div>
+    </div>
   </body>
 </html>
